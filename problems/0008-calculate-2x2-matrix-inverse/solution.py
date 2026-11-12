@@ -10,7 +10,6 @@ def det(matrix):
   n = len(matrix)
   if n == 1:
     return matrix[0][0]
-  m = len(matrix[0])
   t = 1
   total = 0
   for i in range(n):
@@ -25,9 +24,7 @@ def det(matrix):
 def transpose_matrix(a: list[list[int|float]]) -> list[list[int|float]]:
     n = len(a)
     m = len(a[0])
-    new_shape = (m,n)
     new_arr = [[0 for i in range(n)] for j in range(m)]
-    pass
     for i in range(n):
         for j in range(m):
           new_arr[j][i] = a[i][j]
@@ -38,8 +35,7 @@ def adj_matrix(a):
   adj = []
   for i, arr in enumerate(a_t):
     adj_list = []
-    for j, val in enumerate(arr):
-  
+    for j in range(len(arr)):
       minor = [x[:j] + x[j+1:] for x in a_t[:i] + a_t[i+1:]]
       det_m = det(minor)
       if (i+j) % 2 == 1:
@@ -49,12 +45,9 @@ def adj_matrix(a):
   return adj
 
 def inverse_2x2(matrix: list[list[float]]) -> list[list[float]] | None:
-   
-    # Your code here
     det_val = det(matrix)
     if det_val == 0:
         return None
     adj_m = adj_matrix(matrix)
     det_i = 1/det_val
     return scalar_multiply(adj_m, det_i)
-    pass
