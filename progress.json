@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-12T00:43:14.997Z",
+  "generated_at": "2026-11-12T00:47:34.814Z",
   "items": {
     "problem:6": {
       "kind": "problem",
@@ -52,6 +52,19 @@
       "last_pushed_at": "2026-11-12T00:09:20.147Z",
       "language": "python",
       "lines": 18
+    },
+    "problem:83": {
+      "kind": "problem",
+      "id": "83",
+      "title": "Dot Product Calculator",
+      "difficulty": "easy",
+      "category": "Linear Algebra",
+      "url": "https://www.deep-ml.com/problems/83",
+      "path": "problems/0083-dot-product-calculator",
+      "first_solved_at": "2026-11-12T00:47:33.566Z",
+      "last_pushed_at": "2026-11-12T00:47:33.566Z",
+      "language": "python",
+      "lines": 16
     }
   }
 }
