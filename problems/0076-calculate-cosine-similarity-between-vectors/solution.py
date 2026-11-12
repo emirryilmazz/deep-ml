@@ -10,12 +10,6 @@ def cosine_similarity(v1, v2):
         The cosine_similarity of the two vectors.
     """
     dots = np.dot(v1,v2)
-    sum1 = 0
-    sum2 = 0
-    for i in v1:
-        sum1 += i*i
-    for i in v2:
-        sum2 += i*i
-    sum1 = np.sqrt(sum1)
-    sum2 = np.sqrt(sum2)
-    return dots / (sum1*sum2)
+    sum1 = np.dot(v1,v1)
+    sum2 = np.dot(v2,v2)
+    return dots / np.sqrt(sum1*sum2)
